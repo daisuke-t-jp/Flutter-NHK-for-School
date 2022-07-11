@@ -1,16 +1,19 @@
-# nhk_for_school
+# Flutter-NHK-for-School
 
-A new Flutter project.
+[NHK for School API](https://school-api-portal.nhk.or.jp/) を使用したデモアプリです。  
+Flutter で作成されています。
 
-## Getting Started
+`nhk_uri.dart` 内に API キーを設定してビルドしてください。
 
-This project is a starting point for a Flutter application.
+```dart
+// NHK for School Uri クラス
+class NHKUri {
+  static const apiKey = ''; // ここに API キーを設定する
 
-A few resources to get you started if this is your first Flutter project:
+  static Uri keyword(String keyword) {
+    return Uri.https('api.nhk.or.jp', '/school/v1/nfsvideos/keyword', {
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://raw.githubusercontent.com/daisuke-t-jp/Flutter-NHK-for-School/main/doc/home.png" width="280px"> <img src="https://raw.githubusercontent.com/daisuke-t-jp/Flutter-NHK-for-School/main/doc/detail.png" width="280px">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+「情報提供:NHK」
